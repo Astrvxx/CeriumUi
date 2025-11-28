@@ -26,3 +26,19 @@ local Window = Library:CreateWindow{
 ```
 
 # Creating Tabs
+
+```lua
+local Tabs = {
+    Main = Window:CreateTab{
+        Title = "Main",
+        Icon = "" -- Leave empty for no icon
+    },
+    Settings = Window:CreateTab{
+        Title = "Settings",
+        Icon = ""
+    }
+}
+```
+
+# Interface Elements
+## Button
