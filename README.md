@@ -125,3 +125,78 @@ Tabs.Main:CreateKeybind("AimbotKey", {
 })
 ```
 
+## Input Box
+
+```lua
+Tabs.Main:CreateInput("ConfigName", {
+    Title = "Config Name",
+    Default = "default",
+    Placeholder = "Enter name...",
+    Callback = function(Text)
+        print("Input text:", Text)
+    end
+})
+```
+
+## Vector3 Input
+Useful for setting custom coordinates or offsets.
+
+```lua
+Tabs.Main:CreateVector3("TeleportPos", {
+    Title = "Custom Teleport",
+    Default = Vector3.new(0, 0, 0),
+    Callback = function(Vec)
+        print("X:", Vec.X, "Y:", Vec.Y, "Z:", Vec.Z)
+    end
+})
+```
+
+# Visual Elements
+
+## Profile Card
+Displays the local player's avatar, display name, and User ID automatically.
+
+```lua
+Tabs.Main:CreateProfileCard()
+```
+
+## Section & Label
+Used for organizing elements and displaying read-only data.
+
+```lua
+Tabs.Main:CreateSection("Statistics")
+
+local Label = Tabs.Main:CreateLabel({
+    Title = "Ping",
+    Value = "50 ms"
+})
+
+-- Update the label later
+Label:Set("60 ms")
+```
+
+## Dialog / Modal
+Creates a blurred overlay with options.
+
+```lua
+Window:Dialog{
+    Title = "Confirmation",
+    Content = "Are you sure you want to proceed?",
+    Buttons = {
+        {
+            Title = "Yes",
+            Callback = function() print("Yes") end
+        },
+        {
+            Title = "No",
+            Callback = function() print("No") end
+        }
+    }
+}
+```
+
+## Search Bar
+The library includes a built-in search bar at the top of the sidebar. It automatically filters tabs based on the text entered. No configuration is required.
+
+
+# https://discord.gg/uWWqDrVRWR
