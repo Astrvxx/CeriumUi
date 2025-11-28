@@ -12,9 +12,6 @@ local Tabs = {
     Main = Window:CreateTab{
         Title = "Main",
     },
-    Ball = Window:CreateTab{
-        Title = "Ball",
-    },
     Settings = Window:CreateTab{
         Title = "Settings",
     }
