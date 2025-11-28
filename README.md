@@ -42,3 +42,4 @@ local Tabs = {
 
 # Interface Elements
 ## Button
+Includes a built-in cooldown feature to prevent spam.
